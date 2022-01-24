@@ -4,9 +4,9 @@
 }
 
 section {
-	height: 100vh;
-	min-height: 600px;
 	position: relative;
+	height: 100vh;
+	min-height: 37rem;
 	max-width: 1065px;
 	margin: 0 auto;
 	text-align: center;
