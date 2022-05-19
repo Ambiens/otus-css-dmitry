@@ -1,6 +1,16 @@
-/* Main template styles */
-* {
+:root {
+	font-size: 16px;
+	line-height: 1.2;
+}
+
+body {
+	background: white;
 	font-family: 'Roboto', sans-serif;
+}
+
+main {
+	margin: 0 auto;
+	max-width: 90rem;
 }
 
 section {
@@ -15,14 +25,19 @@ section {
 	background-position: center;
 	background-size: 100% auto;
 
-	line-height: 100vh;
+	
 	/* Вариант позиционирования на flex */
 	/*display: flex;
 	align-items: center;
-	justify-content: center;*/
+	justify-content: center;
+	max-width: auto;*/
 	
 	/* Если не вариант с background и локальной картинкой */
-	/* background: none; */
+	/* max-width: auto;
+	background: none; */
+
+	/* Позиционирование с помощью inline-block */
+	/* line-height: 100vh; */
 }
 
 section img {
@@ -36,6 +51,7 @@ section img {
 }
 
 .img-local {
+	max-width: 1065px;
 	/* Вариант с img и локальной картинкой */
 	display: none; 
 }
@@ -43,7 +59,7 @@ section img {
 	max-height: 630px;
 	height: 60vw;
 
-	/* На данный момент не поддерживает IE!!! */
+	/* Надо смотреть по поддержке */
 	object-fit: cover;
 	object-position: center;
 
@@ -71,16 +87,22 @@ section img {
 }
 
 .hero-title {
-	position: relative;
 	background-color: white;
 	text-align: center;
 	font-size: 5.5rem;
 	padding: 1.5em .5em 1.4em;
 	z-index: 1;
 
-	/* позиционирование с помощью inline-block */
+	/* Позиционирование absolute */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	/* Позиционирование с помощью inline-block */
+	/* position: relative;
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: middle; */
 }
 
 .hero-title h1 {
