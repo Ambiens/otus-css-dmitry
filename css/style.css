@@ -17,8 +17,11 @@ section {
 	position: relative;
 	height: 100vh;
 	min-height: 37rem;
-	max-width: 1065px;
 	margin: 0 auto;
+}
+
+
+#studio {
 	text-align: center;
 	background-image: url('../img/inside.jpg');
 	background-repeat: no-repeat;
@@ -40,7 +43,7 @@ section {
 	/* line-height: 100vh; */
 }
 
-section img {
+#studio img {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -131,4 +134,105 @@ section img {
 	padding: 0;
 	font: 300 1.125rem/1.2 "Butler", sans-serif;
 	color: #8C8888;
+}
+
+/* Designers */
+
+#designers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.designers-header {
+	position: absolute;
+}
+
+.designers-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5%;
+    align-items: baseline;
+    position: relative;
+	overflow-x: scroll;
+}
+.designers-container article {
+    transition: 300ms;
+}
+.designers-container article img {
+    object-fit: cover;
+    transition: inherit;
+}
+.designers-summary {
+    padding-top: 1.2rem;
+    transition: inherit;
+}
+
+
+.designers-container article:first-child {
+    margin-right: 85px;
+}
+.designers-container:hover article {
+    margin-right: 0;
+}
+
+.designers-container article:hover, .designers-big {
+    margin: 0 85px;
+}
+.designers-container article:first-child {
+    margin-left: 0;
+}
+.designers-container article:last-child {
+    margin-right: 0;
+}
+
+.designers-container article,
+.designers-container:hover article:first-child
+{
+    padding-top: 96px;
+}
+.designers-container article:hover,
+.designers-container article.designers-big,
+.designers-container article:first-child,
+.designers-container:hover article:hover:first-child
+{
+    padding-top: 0;
+}
+
+.designers-container article img,
+.designers-container:hover article:first-child img
+{
+    height: 442px;
+}
+.designers-container article:hover img,
+.designers-container article.designers-big img,
+.designers-container article:first-child img,
+.designers-container:hover article:first-child:hover img
+{
+    height: 538px;
+}
+
+.designers-summary,
+.designers-container article, .designers-container article img,
+.designers-container:hover article:first-child, .designers-container:hover article:first-child img
+{
+    width: 309px;
+}
+.designers-container article:hover, .designers-container article:hover img,
+.designers-container article.designers-big, .designers-container article.designers-big img,
+.designers-container article:first-child, .designers-container article:first-child img,
+.designers-container:hover article:first-child:hover, .designers-container:hover article:first-child:hover img
+{
+    width: 609px;
+}
+
+.designers-container article:hover .designers-summary,
+.designers-big .designers-summary,
+.designers-container article:first-child .designers-summary,
+.designers-container:hover article:hover:first-child .designers-summary
+{
+    padding-left: 178px;
+}
+.designers-container:hover article:first-child .designers-summary
+{
+    padding-left: 0;
 }
